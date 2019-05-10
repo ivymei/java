@@ -1,0 +1,48 @@
+# java
+import javax.swing.JOptionPane;  // Needed for JOptionPane
+
+public class Average {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+      double score1;    // To hold score #1
+      double score2;    // To hold score #2
+      double score3;    // To hold score #3
+      double average;   // To hold the average score
+      String input;     // To hold the user's input
+
+      // Get the first test score.
+      input = JOptionPane.showInputDialog("Enter score #1:");
+      score1 = Double.parseDouble(input);
+      
+      // Get the second score.
+      input = JOptionPane.showInputDialog("Enter score #2:");
+      score2 = Double.parseDouble(input);
+
+      // Get the third test score.
+      input = JOptionPane.showInputDialog("Enter score #3:");
+      score3 = Double.parseDouble(input);
+      
+      // Calculate the average score.
+      average = (score1 + score2 + score3) / 3.0;
+      
+      if (average < 60 )
+         JOptionPane.showMessageDialog(null, "The average is " + average
+                               + " The letter grade is F ");
+      else if (average < 70 )
+         JOptionPane.showMessageDialog(null, "The average is " + average
+                               + " The letter grade is D ");  
+      else if (average < 80 )
+         JOptionPane.showMessageDialog(null, "The average is " + average
+                               + " The letter grade is c ");
+      else if (average < 90 )
+         JOptionPane.showMessageDialog(null, "The average is " + average
+                               + " The letter grade is B ");
+      else 
+         JOptionPane.showMessageDialog(null, "The average is " + average
+                               + " The letter grade is A ");
+      System.exit(0);
+        
+    }
+    
+}
