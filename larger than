@@ -1,0 +1,39 @@
+package javaapplication1;
+import java.util.Scanner;
+
+/**
+   This program demonstrates a switch statement.
+*/
+
+public class LargerThan
+{
+   public static void main(String[] args)
+   {
+       int arraySize, n;
+       Scanner keyboard = new Scanner(System.in);
+       System.out.print("Enter array size: ");
+       arraySize = keyboard.nextInt();
+       int [] arr = new int[arraySize];
+       
+       for(int i=0; i<arr.length;i++)
+       {
+           System.out.println("Enter array element ["+i+"]");
+           arr[i] = keyboard.nextInt();
+       }
+       
+       System.out.println("Enter an integer");
+       n = keyboard.nextInt();
+       
+       largerThan(arr, n);
+   }
+   
+   public static void largerThan(int[] arr, int n)
+   {
+       for( int i=0; i<arr.length; i++)
+       {
+           if(arr[i]>n)
+               System.out.println("arr["+i+"]="+arr[i]+" is larger than "+n);
+       }
+   }
+}
+
